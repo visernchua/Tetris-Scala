@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tetris.controller.MainViewController">
+   <children>
+      <HBox layoutX="75.0" layoutY="144.0" prefHeight="150.0" prefWidth="450.0" spacing="10.0">
+         <children>
+            <Button fx:id="beginner" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickBeginner" prefHeight="150.0" prefWidth="150.0" text="Beginner" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="intermediate" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickIntermediate" prefHeight="150.0" prefWidth="150.0" text="Intermediate" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="advance" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#chooseLevel" prefHeight="150.0" prefWidth="150.0" text="Advance" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="134.0" layoutY="38.0" prefHeight="79.0" prefWidth="332.0" text="Tetris" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
