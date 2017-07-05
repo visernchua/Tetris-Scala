@@ -17,6 +17,8 @@ class BoardController(tetrisBoard: GridPane,
 	score: Label,
 	backButton: Button) {
 
+	// hold the piece with the orientation
+	var tetromino: List[List[Array[Int]]] = List()
 	// hold currentPiece data
 	var currentPiece: List[Array[Int]] = List()
 
@@ -80,17 +82,24 @@ class BoardController(tetrisBoard: GridPane,
 	var counter: Int = 0
 	var time = 0L
 
+	//var piece = List(Array(0,0),Array(1,0),Array(2,0),Array(3,0))
+
+
 	//animation for Tetromino.I
 	val timer: AnimationTimer = AnimationTimer(t => {
-
 		
-
-		var piece = List(Array(0,0),Array(1,0),Array(2,0),Array(3,0))
-
+		// if currentPiece is empty, get new one
+		// now just for testing, hardcoded
 		if (currentPiece.isEmpty) {
-			currentPiece = Tetromino.I(0)
+			tetromino = Tetromino.J
+			currentPiece = Tetromino.J(0)
 			for (a <- 0 until currentPiece.size) {
-				rectangles(currentPiece(a)(0))(currentPiece(a)(1)).fill = "blue"
+				// rectangles(x)(y)
+				// if y + 1, move right
+				// if y - 1, move left
+				// if x + 1, move down
+				// if x - 1, move up
+				rectangles(currentPiece(a)(1))(currentPiece(a)(0)).fill = "blue"
 			}
 		}
 
@@ -98,17 +107,18 @@ class BoardController(tetrisBoard: GridPane,
 		if ((t - time) > 1e+9) {
 			// paint the board back white
 			for (a <- 0 until currentPiece.size) {
-				rectangles(currentPiece(a)(0))(currentPiece(a)(1)).fill = "white"
+				rectangles(currentPiece(a)(1))(currentPiece(a)(0)).fill = "white"
 			}
-
+			var rotated = rotate(tetromino, currentPiece)
+			currentPiece = rotated
 			// move down one
 			for (a <- 0 until currentPiece.size) {
-				currentPiece(a)(0) += 1
+				currentPiece(a)(1) += 1
 			}
 
 			// paint the board back blue
 			for (a <- 0 until currentPiece.size) {
-				rectangles(currentPiece(a)(0))(currentPiece(a)(1)).fill = "blue"
+				rectangles(currentPiece(a)(1))(currentPiece(a)(0)).fill = "blue"
 			}
 
 			time = t
@@ -160,6 +170,23 @@ class BoardController(tetrisBoard: GridPane,
 	})
 
 	timer.start
+
+	def rotate(tetromino: List[List[Array[Int]]], piece: List[Array[Int]]): List[Array[Int]] = {
+		for (a <- 0 until tetromino.size) {
+			if (tetromino(a) == piece) {
+				if (a + 1 >= tetromino.size) {
+					println(0)
+					return tetromino(0)
+				} else {
+					println(a + 1)
+					return tetromino(a+1)
+				}
+			}
+		}
+		// if it goes to this line means got error
+		println("Error: ")
+		return tetromino(0)
+	}
 
 	def refreshBoard() = {
 		tetrisBoard.children.clear()
