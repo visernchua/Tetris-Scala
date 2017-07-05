@@ -25,8 +25,14 @@ class BoardController(tetrisBoard: GridPane,
 	// hold nextPiece data
 	var nextPiece: List[Array[Int]] = List()
 
-	// hold diePiece data
-	var diePiece: List[List[Array[Int]]] = List()
+	// a virtual board that holds all the diePiece data
+	var board = Array.ofDim[Int](20, 10)
+
+	for (row <- 0 until 20) {
+		for (col <- 0 until 10) {
+			board(row)(col) = 0
+		}
+	}
 
 	// example of a piece
 	//var piece = List(Array(0,0),Array(1,0),Array(2,0),Array(3,0))
@@ -42,6 +48,7 @@ class BoardController(tetrisBoard: GridPane,
 	// 		},Tetromino.I(1)(a)(1)+1, Tetromino.I(1)(a)(0)+1)
 	// }
 
+	// rectangles(row)(col)
 	var rectangles: List[List[Rectangle]] = List()
 
 	// create every single rectangles
@@ -57,8 +64,7 @@ class BoardController(tetrisBoard: GridPane,
 		}
 		rectangles = rectangles ++: List(tmpRec)
 	}
-
-
+	
 
 
 	// control
@@ -94,7 +100,7 @@ class BoardController(tetrisBoard: GridPane,
 			tetromino = Tetromino.I
 			currentPiece = Tetromino.I(0)
 			for (a <- 0 until currentPiece.size) {
-				// rectangles(y)(x)
+				// rectangles(x)(y)
 				// if y + 1, move right
 				// if y - 1, move left
 				// if x + 1, move down
@@ -102,6 +108,8 @@ class BoardController(tetrisBoard: GridPane,
 				rectangles(currentPiece(a)(1))(currentPiece(a)(0)).fill = "blue"
 			}
 		}
+
+		//collisionDetection(currentPiece,rectangles)
 
 		// make the body of this if statement to run every second
 		if ((t - time) > 1e+9) {
@@ -188,12 +196,35 @@ class BoardController(tetrisBoard: GridPane,
 		return tetromino(0)
 	}
 
+	// check virtual board
+	// use virtual board length
+	// if it collide, save the piece to virtual board
+	// refresh the baord
+	// refresh the whole board
+	// reset currentPiece
+	// set currentPiece = nextPiece
+	// reset nextPiece
+	// call random to get next piece
 	def collisionDetection(piece: List[Array[Int]], board: List[List[Rectangle]]) = {
-		
+		// for (a <- 0 until piece.size) {
+		// 	if (board(piece(a)(1)+1)(piece(a)(0)).getFill.equals("0x0000ffff")) {
+		// 	 	println("true")
+		// 	}
+		// }
+		// println("false")
 	}
 
+	// bind with virtual board
 	def refreshBoard() = {
-		tetrisBoard.children.clear()
+		for (row <- 0 until 20) {
+			for (col <- 0 until 10) {
+				if (board(row)(col) == 1) {
+					rectangles(row)(col).fill = "blue"
+				} else {
+					rectangles(row)(col).fill = "white"
+				}
+			}
+		}
 	}
 
 }
