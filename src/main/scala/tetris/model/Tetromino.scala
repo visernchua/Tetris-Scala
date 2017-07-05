@@ -8,9 +8,12 @@ object Tetromino {
 	//a= list of all the rotation
 	//b= list of squares to create a block
 	//c= a square
+	// Array(x,y)
+	// x + 1 = move left
+	// y + 1 = move down
 
-	val I = List(List(Array(0,0),Array(1,0),Array(2,0),Array(3,0)),
-				 List(Array(0,0),Array(0,1),Array(0,2),Array(0,3))
+	val I = List(List(Array(0,0),Array(0,1),Array(0,2),Array(0,3)),
+				 List(Array(0,0),Array(1,0),Array(2,0),Array(3,0))
 				 )
 
 	val J = List(List(Array(0,1),Array(1,1),Array(2,1),Array(0,0)),

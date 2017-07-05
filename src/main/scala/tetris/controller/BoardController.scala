@@ -91,10 +91,10 @@ class BoardController(tetrisBoard: GridPane,
 		// if currentPiece is empty, get new one
 		// now just for testing, hardcoded
 		if (currentPiece.isEmpty) {
-			tetromino = Tetromino.J
-			currentPiece = Tetromino.J(0)
+			tetromino = Tetromino.I
+			currentPiece = Tetromino.I(0)
 			for (a <- 0 until currentPiece.size) {
-				// rectangles(x)(y)
+				// rectangles(y)(x)
 				// if y + 1, move right
 				// if y - 1, move left
 				// if x + 1, move down
@@ -186,6 +186,10 @@ class BoardController(tetrisBoard: GridPane,
 		// if it goes to this line means got error
 		println("Error: ")
 		return tetromino(0)
+	}
+
+	def collisionDetection(piece: List[Array[Int]], board: List[List[Rectangle]]) = {
+		
 	}
 
 	def refreshBoard() = {
