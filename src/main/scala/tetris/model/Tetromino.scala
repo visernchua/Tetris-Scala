@@ -1,7 +1,5 @@
 package tetris.model
 
-import scala.util.Random
-
 object Tetromino {
 
 	//(a)(b)(c);
@@ -16,13 +14,13 @@ object Tetromino {
 				 List(Array(0,0),Array(1,0),Array(2,0),Array(3,0))
 				 )
 
-	val J = List(List(Array(0,1),Array(1,1),Array(2,1),Array(0,0)),
-				 List(Array(0,0),Array(0,1),Array(1,0),Array(2,0)),
-				 List(Array(0,0),Array(0,1),Array(1,1),Array(2,1)),
-				 List(Array(0,0),Array(0,1),Array(0,2),Array(1,2))
+	val L = List(List(Array(0,0),Array(0,1),Array(0,2),Array(1,2)),
+				 List(Array(0,1),Array(0,0),Array(1,0),Array(2,0)),
+				 List(Array(0,0),Array(1,0),Array(1,1),Array(1,2)),
+				 List(Array(0,1),Array(1,1),Array(2,1),Array(2,0))
 				 )
 
-	val L = List(List(Array(1,0),Array(0,0),Array(0,1),Array(0,2)),
+	val J = List(List(Array(1,0),Array(0,0),Array(0,1),Array(0,2)),
 				 List(Array(0,0),Array(1,0),Array(2,0),Array(2,1)),
 				 List(Array(0,2),Array(1,2),Array(1,1),Array(1,0)),
 				 List(Array(0,0),Array(0,1),Array(1,1),Array(2,1))
@@ -38,11 +36,11 @@ object Tetromino {
 				 List(Array(0,0),Array(0,1),Array(1,0),Array(1,1))
 				 )
 
-	val Z = List(List(Array(0,0),Array(0,1),Array(1,1),Array(1,2)),
+	val S = List(List(Array(0,0),Array(0,1),Array(1,1),Array(1,2)),
 				 List(Array(0,1),Array(1,1),Array(1,0),Array(2,0))
 				 )
 
-	val S = List(List(Array(1,0),Array(1,1),Array(0,1),Array(0,2)),
+	val Z = List(List(Array(1,0),Array(1,1),Array(0,1),Array(0,2)),
 				 List(Array(0,0),Array(1,0),Array(1,1),Array(2,1))
 				 )
 
