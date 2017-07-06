@@ -14,8 +14,7 @@ import tetris.model.Tetromino
 @sfxml
 class BoardController(tetris: AnchorPane, tetrisBoard: GridPane, 
 	nextPieceBoard: GridPane, 
-	score: Label,
-	backButton: Button) {
+	score: Label) {
 
 	// hold all the tetromino
 	val tetromino = List(Tetromino.I, Tetromino.J, Tetromino.L, Tetromino.T, Tetromino.O, Tetromino.Z, Tetromino.S)
@@ -82,17 +81,27 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 	}
 
 	// control
+	var pause = false
 	var leftPressed = false
 	var rightPressed = false
 	var upPressed = false
 	var downPressed = false
-	var spacePressed = false
+	var enterPressed = false
 	tetris.onKeyPressed = (e: KeyEvent) => {
 		if(e.code == KeyCode.LEFT) leftPressed = true
 		if(e.code == KeyCode.RIGHT) rightPressed = true
 		if(e.code == KeyCode.UP) upPressed = true
 		if(e.code == KeyCode.DOWN) downPressed = true
-		if(e.code == KeyCode.SPACE) spacePressed = true
+		if(e.code == KeyCode.ENTER) enterPressed = true
+		if(e.code == KeyCode.P) {
+			if (pause == false) {
+				timer.stop
+				pause = true
+			} else {
+				timer.start
+				pause = false
+			}
+		}
 	}
 	// tetris.onKeyReleased = (e: KeyEvent) => {
 	// 	if(e.code == KeyCode.LEFT) leftPressed = false
@@ -159,8 +168,9 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 			move(0,1)
 			downPressed = false
 		}
-		if(spacePressed) {
-			print("space")
+		if(enterPressed) {
+			println("enter")
+			enterPressed = false
 		}
 
 		//collisionDetection(currentPiece,rectangles)
