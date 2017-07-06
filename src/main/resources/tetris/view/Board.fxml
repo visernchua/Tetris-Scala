@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="675.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tetris.controller.BoardController">
+<AnchorPane fx:id="tetris" prefHeight="675.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tetris.controller.BoardController">
    <children>
       <GridPane fx:id="tetrisBoard" alignment="CENTER" gridLinesVisible="true" layoutX="77.0" layoutY="38.0" prefHeight="600.0" prefWidth="300.0">
         <columnConstraints>

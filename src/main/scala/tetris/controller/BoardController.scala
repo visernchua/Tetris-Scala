@@ -3,7 +3,7 @@ package tetris.controller
 import scalafx.Includes._
 import scalafx.event.ActionEvent
 import scalafx.scene.control.{Button,Label}
-import scalafx.scene.layout.GridPane
+import scalafx.scene.layout.{AnchorPane, GridPane}
 import scalafxml.core.macros.sfxml
 import scalafx.scene.shape.Rectangle
 import scalafx.animation._
@@ -12,7 +12,7 @@ import scalafx.scene.input.{KeyCode,KeyEvent}
 import tetris.model.Tetromino
 
 @sfxml
-class BoardController(tetrisBoard: GridPane, 
+class BoardController(tetris: AnchorPane, tetrisBoard: GridPane, 
 	nextPieceBoard: GridPane, 
 	score: Label,
 	backButton: Button) {
@@ -71,19 +71,19 @@ class BoardController(tetrisBoard: GridPane,
 	var leftPressed = false
 	var rightPressed = false
 	var upPressed = false
-	var downPressed = false	
-	// onKeyPressed = (e:KeyEvent) => {
-	// 	if(e.code == KeyCode.LEFT) leftPressed = true
-	// 	if(e.code == KeyCode.RIGHT) rightPressed = true
-	// 	if(e.code == KeyCode.UP) upPressed = true
-	// 	if(e.code == KeyCode.DOWN) downPressed = true
-	// }
-	// onKeyReleased = (e:KeyEvent) => {
-	// 	if(e.code == KeyCode.LEFT) leftPressed = false
-	// 	if(e.code == KeyCode.RIGHT) rightPressed = false
-	// 	if(e.code == KeyCode.UP) upPressed = false
-	// 	if(e.code == KeyCode.DOWN) downPressed = false
-	// }
+	var downPressed = false
+	tetris.onKeyPressed = (e: KeyEvent) => {
+		if(e.code == KeyCode.LEFT) leftPressed = true
+		if(e.code == KeyCode.RIGHT) rightPressed = true
+		if(e.code == KeyCode.UP) upPressed = true
+		if(e.code == KeyCode.DOWN) downPressed = true
+	}
+	tetris.onKeyReleased = (e: KeyEvent) => {
+		if(e.code == KeyCode.LEFT) leftPressed = false
+		if(e.code == KeyCode.RIGHT) rightPressed = false
+		if(e.code == KeyCode.UP) upPressed = false
+		if(e.code == KeyCode.DOWN) downPressed = false
+	}
 
 	var counter: Int = 0
 	var time = 0L
@@ -163,18 +163,18 @@ class BoardController(tetrisBoard: GridPane,
 	// }
 	// }
 
-		// if(leftPressed) {
-		// 	rectangles(0)(0).fill = "blue"
-		// }
-		// if(rightPressed) {
-		// 	print("right")
-		// }
-		// if(upPressed) {
-		// 	print("up")
-		// }
-		// if(downPressed) {
-		// 	print("down")
-		// }
+		if(leftPressed) {
+			print("left")
+		}
+		if(rightPressed) {
+			print("right")
+		}
+		if(upPressed) {
+			print("up")
+		}
+		if(downPressed) {
+			print("down")
+		}
 	})
 
 	timer.start
