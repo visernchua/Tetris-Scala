@@ -24,7 +24,7 @@ object MainApp extends JFXApp {
 
     stage = new PrimaryStage {
         title = "Tetris"
-        scene = new Scene {
+        scene = new Scene(800,670) {
           root = roots
         }
     }
