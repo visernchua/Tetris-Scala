@@ -1,7 +1,7 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/visern/Tetris-Scala/src/main/resources/tetris,/home/visern/Tetris-Scala/target/scala-2.10/classes/tetris)[0m
-[0m[[0mdebug[0m] [0m	(/home/visern/Tetris-Scala/src/main/resources/tetris/readme,/home/visern/Tetris-Scala/target/scala-2.10/classes/tetris/readme)[0m
-[0m[[0mdebug[0m] [0m	(/home/visern/Tetris-Scala/src/main/resources/tetris/view,/home/visern/Tetris-Scala/target/scala-2.10/classes/tetris/view)[0m
-[0m[[0mdebug[0m] [0m	(/home/visern/Tetris-Scala/src/main/resources/tetris/view/Board.fxml,/home/visern/Tetris-Scala/target/scala-2.10/classes/tetris/view/Board.fxml)[0m
-[0m[[0mdebug[0m] [0m	(/home/visern/Tetris-Scala/src/main/resources/tetris/view/readme,/home/visern/Tetris-Scala/target/scala-2.10/classes/tetris/view/readme)[0m
-[0m[[0mdebug[0m] [0m	(/home/visern/Tetris-Scala/src/main/resources/tetris/view/MainView.fxml,/home/visern/Tetris-Scala/target/scala-2.10/classes/tetris/view/MainView.fxml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\elwar\Desktop\Tetris-Scala\src\main\resources\tetris,C:\Users\elwar\Desktop\Tetris-Scala\target\scala-2.10\classes\tetris)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\elwar\Desktop\Tetris-Scala\src\main\resources\tetris\readme,C:\Users\elwar\Desktop\Tetris-Scala\target\scala-2.10\classes\tetris\readme)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\elwar\Desktop\Tetris-Scala\src\main\resources\tetris\view,C:\Users\elwar\Desktop\Tetris-Scala\target\scala-2.10\classes\tetris\view)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\elwar\Desktop\Tetris-Scala\src\main\resources\tetris\view\Board.fxml,C:\Users\elwar\Desktop\Tetris-Scala\target\scala-2.10\classes\tetris\view\Board.fxml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\elwar\Desktop\Tetris-Scala\src\main\resources\tetris\view\MainView.fxml,C:\Users\elwar\Desktop\Tetris-Scala\target\scala-2.10\classes\tetris\view\MainView.fxml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\elwar\Desktop\Tetris-Scala\src\main\resources\tetris\view\readme,C:\Users\elwar\Desktop\Tetris-Scala\target\scala-2.10\classes\tetris\view\readme)[0m

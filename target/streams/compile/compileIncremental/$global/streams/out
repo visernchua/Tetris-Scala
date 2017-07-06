@@ -2,29 +2,29 @@
 [0m[[0mdebug[0m] [0m[naha] Initial source changes: [0m
 [0m[[0mdebug[0m] [0m[naha] 	removed:Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	added: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] 	modified: Set(/home/visern/Tetris-Scala/src/main/scala/tetris/controller/BoardController.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] 	modified: Set(C:\Users\elwar\Desktop\Tetris-Scala\src\main\scala\tetris\controller\BoardController.scala)[0m
 [0m[[0mdebug[0m] [0m[naha] Invalidated products: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] External API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Modified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(/home/visern/Tetris-Scala/src/main/scala/tetris/controller/BoardController.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(C:\Users\elwar\Desktop\Tetris-Scala\src\main\scala\tetris\controller\BoardController.scala)[0m
 [0m[[0mdebug[0m] [0m[naha] [0m
 [0m[[0mdebug[0m] [0m[naha] Sources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m[naha] 	product: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/visern/Tetris-Scala/src/main/scala/tetris/controller/BoardController.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/home/visern/Tetris-Scala/src/main/scala/tetris/controller/BoardController.scala)[0m
-[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/visern/Tetris-Scala/target/scala-2.10/classes...[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\elwar\Desktop\Tetris-Scala\src\main\scala\tetris\controller\BoardController.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(C:\Users\elwar\Desktop\Tetris-Scala\src\main\scala\tetris\controller\BoardController.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Users\elwar\Desktop\Tetris-Scala\target\scala-2.10\classes...[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.15:component from component compiler for Scala 2.10.6[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.15:component from component compiler for Scala 2.10.6[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 7c247f, interfacing (CompilerInterface) with Scala compiler version 2.10.6[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 4e2c9501, interfacing (CompilerInterface) with Scala compiler version 2.10.6[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
-[0m[[0mdebug[0m] [0m	-Xplugin:/home/visern/.ivy2/cache/org.scalamacros/paradise_2.10.6/jars/paradise_2.10.6-2.1.0.jar[0m
+[0m[[0mdebug[0m] [0m	-Xplugin:C:\Users\elwar\.ivy2\cache\org.scalamacros\paradise_2.10.6\jars\paradise_2.10.6-2.1.0.jar[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
-[0m[[0mdebug[0m] [0m	/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/visern/.sbt/boot/scala-2.10.6/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes;C:\Users\elwar\.sbt\boot\scala-2.10.6\lib\scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
-[0m[[0mdebug[0m] [0m	/home/visern/Tetris-Scala/target/scala-2.10/classes:/usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar:/home/visern/.ivy2/cache/org.scalafx/scalafx_2.10/jars/scalafx_2.10-8.0.40-R8.jar:/home/visern/.sbt/boot/scala-2.10.6/lib/scala-reflect.jar:/home/visern/.ivy2/cache/org.scalafx/scalafxml-core-sfx8_2.10/jars/scalafxml-core-sfx8_2.10-0.2.2.jar:/home/visern/.ivy2/cache/org.scalafx/scalafxml-core-macros-sfx8_2.10/jars/scalafxml-core-macros-sfx8_2.10-0.2.2.jar:/home/visern/.ivy2/cache/org.scalamacros/quasiquotes_2.10/jars/quasiquotes_2.10-2.0.1.jar:/home/visern/.ivy2/cache/com.github.nscala-time/nscala-time_2.10/jars/nscala-time_2.10-2.12.0.jar:/home/visern/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.3.jar:/home/visern/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.2.jar[0m
-[0m[[0mdebug[0m] [0mScala compilation took 13.715876819 s[0m
+[0m[[0mdebug[0m] [0m	C:\Users\elwar\Desktop\Tetris-Scala\target\scala-2.10\classes;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\jfxrt.jar;C:\Users\elwar\.ivy2\cache\org.scalafx\scalafx_2.10\jars\scalafx_2.10-8.0.40-R8.jar;C:\Users\elwar\.sbt\boot\scala-2.10.6\lib\scala-reflect.jar;C:\Users\elwar\.ivy2\cache\org.scalafx\scalafxml-core-sfx8_2.10\jars\scalafxml-core-sfx8_2.10-0.2.2.jar;C:\Users\elwar\.ivy2\cache\org.scalafx\scalafxml-core-macros-sfx8_2.10\jars\scalafxml-core-macros-sfx8_2.10-0.2.2.jar;C:\Users\elwar\.ivy2\cache\org.scalamacros\quasiquotes_2.10\jars\quasiquotes_2.10-2.0.1.jar;C:\Users\elwar\.ivy2\cache\com.github.nscala-time\nscala-time_2.10\jars\nscala-time_2.10-2.12.0.jar;C:\Users\elwar\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.3.jar;C:\Users\elwar\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.2.jar[0m
+[0m[[0mdebug[0m] [0mScala compilation took 2.429422999 s[0m
 [0m[[0mdebug[0m] [0m[naha] New invalidations:[0m
 [0m[[0mdebug[0m] [0m[naha] 	Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set()[0m

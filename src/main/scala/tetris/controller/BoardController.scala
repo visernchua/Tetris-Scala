@@ -55,8 +55,8 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 		var tmpRec: List[Rectangle] = List()
 		for (col <- 0 until 10) {
 			tmpRec = tmpRec :+ new Rectangle {
-				width = 30
-				height = 30
+				width = 27
+				height = 27
 				fill = "white"
 			}
 			tetrisBoard.add(tmpRec(col),col,row)
@@ -72,8 +72,8 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 		var tmpRec: List[Rectangle] = List()
 		for (col <- 0 until 4) {
 			tmpRec = tmpRec :+ new Rectangle {
-				width = 30
-				height = 30
+				width = 27
+				height = 27
 				fill = "white"
 			}
 			nextPieceBoard.add(tmpRec(col),col,row)
