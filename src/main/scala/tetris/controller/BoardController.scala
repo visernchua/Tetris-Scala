@@ -17,8 +17,11 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 	score: Label,
 	backButton: Button) {
 
+	// hold all the tetromino
+	val tetromino = List(Tetromino.I, Tetromino.J, Tetromino.L, Tetromino.T, Tetromino.O, Tetromino.Z, Tetromino.S)
+
 	// hold the piece with the orientation
-	var tetromino: List[List[Array[Int]]] = List()
+	var currentTetromino: List[List[Array[Int]]] = List()
 	// hold currentPiece data
 	var currentPiece: List[Array[Int]] = List()
 
@@ -72,17 +75,20 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 	var rightPressed = false
 	var upPressed = false
 	var downPressed = false
+	var spacePressed = false
 	tetris.onKeyPressed = (e: KeyEvent) => {
 		if(e.code == KeyCode.LEFT) leftPressed = true
 		if(e.code == KeyCode.RIGHT) rightPressed = true
 		if(e.code == KeyCode.UP) upPressed = true
 		if(e.code == KeyCode.DOWN) downPressed = true
+		if(e.code == KeyCode.SPACE) spacePressed = true
 	}
 	tetris.onKeyReleased = (e: KeyEvent) => {
 		if(e.code == KeyCode.LEFT) leftPressed = false
 		if(e.code == KeyCode.RIGHT) rightPressed = false
 		if(e.code == KeyCode.UP) upPressed = false
 		if(e.code == KeyCode.DOWN) downPressed = false
+		if(e.code == KeyCode.SPACE) spacePressed = false
 	}
 
 	var counter: Int = 0
@@ -97,8 +103,8 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 		// if currentPiece is empty, get new one
 		// now just for testing, hardcoded
 		if (currentPiece.isEmpty) {
-			tetromino = Tetromino.I
-			currentPiece = Tetromino.I(0)
+			currentTetromino = randomPiece()
+			currentPiece = currentTetromino(0)
 			for (a <- 0 until currentPiece.size) {
 				// rectangles(x)(y)
 				// if y + 1, move right
@@ -117,7 +123,7 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 			for (a <- 0 until currentPiece.size) {
 				rectangles(currentPiece(a)(1))(currentPiece(a)(0)).fill = "white"
 			}
-			var rotated = rotate(tetromino, currentPiece)
+			var rotated = rotate(currentTetromino, currentPiece)
 			currentPiece = rotated
 			// move down one
 			for (a <- 0 until currentPiece.size) {
@@ -175,6 +181,9 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 		if(downPressed) {
 			print("down")
 		}
+		if(spacePressed) {
+			print("space")
+		}
 	})
 
 	timer.start
@@ -225,6 +234,10 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 				}
 			}
 		}
+	}
+
+	def randomPiece(): List[List[Array[Int]]] = {
+		return tetromino(Random.nextInt(tetromino.size))
 	}
 
 }
