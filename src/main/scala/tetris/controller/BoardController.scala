@@ -76,10 +76,12 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 	val media6= new Media(source = file6.toURI().toString) 
 	val player6= new MediaPlayer(media = media6)
 
-	var sound: List[MediaPlayer] = List(player,player2,player3,player4,player5,player6)
+	val file7 = new File("src/main/resources/tetris/sound/pause.wav")
+	val media7= new Media(source = file7.toURI().toString) 
+	val player7= new MediaPlayer(media = media7)
 
-	for (a <- 0 until sound.size) {
-	}
+
+	var sound: List[MediaPlayer] = List(player,player2,player3,player4,player5,player6,player7)
 
 	// Initialize the board
 	for (row <- 0 until 20) {
@@ -136,11 +138,15 @@ class BoardController(tetris: AnchorPane, tetrisBoard: GridPane,
 		if(e.code == KeyCode.ENTER) enterPressed = true
 		if(e.code == KeyCode.P) {
 			if (pause == false && gameOver == false) {
+				sound(6).stop
+				sound(6).play
 				timer.stop
 				showPaused.setText("Game Paused!")
 				pause = true
 			} else {
 				if (pause == true && gameOver == false) {
+					sound(6).stop
+					sound(6).play
 					timer.start
 					showPaused.setText("")
 					pause = false
